@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>|Nietiet GmbH| Auftrag abgeschlossen | @{outputs('Zeile_abrufen_2')?['body/Auftrag']}-A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://kingpin0509.github.io/Html/imgs/cropped-fav-icon-2-32x32.png">
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background: #f5f5f5;
+            font-family: 'Montserat', Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .topcontainer {
+            margin-bottom: 12px;
+            margin-top: 12px;
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .pdfcontainer {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .wordcontainer {
+            margin-top: 48px;
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            width: 240px;
+            margin-bottom: 12x;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 10px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: none;
+            background: #0078d4;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://kingpin0509.github.io/Html/imgs/logo_nietiet.png" alt="Nietiet GmbH - Logo" class="logo">
+    </div>
+    <div class="topcontainer">
+        <h1>Auftrag abgeschlossen<br>@{outputs('Zeile_abrufen_2')?['body/Auftrag']}-A</h1>
+        <div class="pdfcontainer">
+            <H3>Tab schließen um zum Auftragsbestand zurückzukehren</H3>
+            <button onclick="window.close()">Tab schließen</button>
+        </div>
+    </div>
+</body>
+
+</html>

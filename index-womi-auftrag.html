@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>@{outputs('Zeile_abrufen_4')?['body/WOMI']} | Auftrag abgeschlossen |Nietiet GmbH| </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://kingpin0509.github.io/Html/imgs/cropped-fav-icon-2-32x32.png">
+
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background: #1a1818;
+            font-family: 'Montserat', Arial, sans-serif;
+            flex-direction: column;
+        }
+        .logo {
+            width: 200px;
+            margin: 30px 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(58, 60, 66, 0.1);
+        }
+        .topcontainer {
+            margin: 50px 0;
+            text-align: center;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(58, 60, 66, 0.5);
+        }
+        .closecontainer {
+            margin: 44px 0;
+            text-align: center;
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: solid 3px #1a1818;
+
+            box-shadow: 0 2px 12px rgba(58, 60, 66, 0.8);
+        }
+        .wordcontainer {
+            margin-top: 48px;
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(58, 60, 66, 0.1);
+        }
+        button {
+            margin: 0px;
+            padding: 6px 14px;
+            font-size: 1.35rem;
+            font-weight: bold;
+            border-radius: 8px;
+            border: ridge 1px #1a1818;
+            background: #C9D100;
+            color: #1a1818;
+            cursor: pointer;
+            transition: background 1s;
+        }
+        button:hover {
+            background: #3A3C42;
+            color: #D5D5D5;
+            border: double 1px #C9D100;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://kingpin0509.github.io/Html/imgs/logo_nietiet.png" alt="Nietiet GmbH - Logo" class="logo">
+    <div class="topcontainer">
+        <h1>Auftrag abgeschlossen</h1>
+        <h2>@{outputs('Zeile_abrufen_4')?['body/WOMI']} | @{outputs('Zeile_abrufen_4')?['body/Produkt']} | @{outputs('Zeile_abrufen_4')?['body/Kundencharge']}</h2>
+        <h2>Produzierte Menge: @{outputs('Zeile_abrufen_4')?['body/Abfüllmenge IST (kg)']}</h2>
+    </div>
+    <div class="closecontainer">
+        <H3>Klicke auf OK um zurückzukehren</H3>
+        <button onclick="window.close()">OK</button>
+    </div>
+</body>
+</html>

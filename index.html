@@ -1,89 +1,41 @@
+Statuscode 200
+Content-Type text/html
+
+
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
-    <title>Kunststoffkataster - Protokoll | @{outputs('Zeile_Name_abrufen')?['body/Bezeichnung']} |Nietiet GmbH|</title>
+    <title>Meine Webseite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://kingpin0509.github.io/Html/imgs/cropped-fav-icon-2-32x32.png">
     <style>
-        @font-face {
-            font-family: 'Montserrat';
-            src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         body {
             min-height: 100vh;
             margin: 0;
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
             background: #f5f5f5;
-            font-family: 'Montserat', Arial, sans-serif;
-            flex-direction: column;
+            font-family: Arial, sans-serif;
         }
-
         .container {
             text-align: center;
             background: #fff;
-            padding: 20px 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .topcontainer {
-            margin-bottom: 12px;
-            margin-top: 12px;
-            text-align: center;
-            background: #fff;
             padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
-
-        .pdfcontainer {
-            margin-top: 12px;
-            margin-bottom: 12px;
-            text-align: center;
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .wordcontainer {
-            margin-top: 48px;
-            text-align: center;
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
         .logo {
-            width: 240px;
-            margin-bottom: 12x;
+            width: 120px;
+            margin-bottom: 24px;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <img src="https://kingpin0509.github.io/Html/imgs/logo_nietiet.png" alt="Nietiet GmbH - Logo" class="logo">
-    </div>
-    <div class="topcontainer">
-        <h1>Kunststoffkataster - Protokoll - @{outputs('Zeile_Name_abrufen')?['body/Bezeichnung']}</h1>
-    </div>
-    <div class="pdfcontainer">
-        <H3>PDF Dokument - zum direkten drucken</H3>
-        <H3><a href="...">Drucken</a></H3>
-    </div>
-    <div class="wordcontainer">
-        <p>Word Dokument - zur weiteren bearbeitung</p>
-        <a href="@{outputs('Dateieigenschaften_abrufen')?['body/{Link}']}">Öffnen</a>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Willkommen auf meiner Webseite</h1>
+        <p>Hier steht dein Inhalt.</p>
     </div>
 </body>
-
 </html>
